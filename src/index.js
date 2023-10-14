@@ -5,7 +5,6 @@ let state = document.getElementById("option");
 let staer = 0;
 
 function cleanLogs () {
-    debugger;
     while (document.getElementById("outputLog").firstChild) {
         document.getElementById("outputLog").removeChild(document.getElementById("outputLog").firstChild)
     }
