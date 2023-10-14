@@ -3,6 +3,7 @@ class Node {
         this.key = key;
         this.left = null;
         this.right = null;
+        this.inOrderList = [];
     };
 }
 
@@ -63,7 +64,24 @@ class BST {
         return this.hasKeyRecursive(this.root, value);
     }
 
+    inOrderRecursion(root) {
+        if (root.left != null) {
+            this.inOrderRecursion(root.left);
+        }
+        this.inOrderList.push(root.key);
+        if (root.right != null) {
+            this.inOrderRecursion(root.right);
+        }
+    };
 
+    inOrder() {
+        this.inOrderList = [];
+        if (this.root == null) {
+            return this.inOrderList;
+        }
+        this.inOrderRecursion(this.root);
+        return this.inOrderList;
+    };
 
 };
 
@@ -73,5 +91,6 @@ x.Insert(33);
 x.Insert(12);
 x.Insert(34);
 x.Insert(4);
+let y = x.inOrder();
+console.log(y);
 
-console.log(x.hasKey(444));
