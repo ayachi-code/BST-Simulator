@@ -40,15 +40,27 @@ class BST {
         this.insertRecursive(this.root, value);
     };
 
-    hasKeyRecursive() {
-        
+    hasKeyRecursive(root, value) {
+        if (root.key == value) {
+            return true;
+        }
+
+        if (value < root.key && root.right != null) {
+            this.hasKeyRecursive(root.left, value);
+        }
+
+        if (value > root.key && root.right != null) {
+            this.hasKeyRecursive(root.right, value);
+        }
+
+        return false;
     }
 
     hasKey(value) {
         if (this.root == null) {
             return false;
         };
-        return hasKeyRecursive(this.root, value);
+        return this.hasKeyRecursive(this.root, value);
     }
 
 
@@ -62,4 +74,4 @@ x.Insert(12);
 x.Insert(34);
 x.Insert(4);
 
-console.log(x);
+console.log(x.hasKey(444));
