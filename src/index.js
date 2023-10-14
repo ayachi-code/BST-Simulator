@@ -26,6 +26,11 @@ document.getElementById("ok").addEventListener('click', () => {
     if (state.value == "insert") {
         tree.Insert(document.getElementById("inputNumber").value);
         console.log("inserting " + document.getElementById("inputNumber").value );
+        let outputLog = document.createElement("p");
+        let outpuLogText = document.createTextNode("Inserting: " +  document.getElementById("inputNumber").value + " to the BST" )
+        outputLog.appendChild(outpuLogText);
+        document.getElementById("outputLog").appendChild(outputLog);
+
     } else if (state.value == "hasKey") {
         document.getElementById("output").innerText = tree.hasKey((document.getElementById("inputNumber").value))
     } else if (state.value == "inOrder") {
