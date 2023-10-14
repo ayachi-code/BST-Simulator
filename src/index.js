@@ -26,6 +26,6 @@ document.getElementById("ok").addEventListener('click', () => {
         tree.Insert(document.getElementById("inputNumber").value);
         console.log("inserting " + document.getElementById("inputNumber").value );
     } else if (state.value == "hasKey") {
-        console.log(tree.hasKey((document.getElementById("inputNumber").value)))
+        document.getElementById("output").innerText = tree.hasKey((document.getElementById("inputNumber").value))
     }
 });
