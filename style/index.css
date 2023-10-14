@@ -13,7 +13,14 @@ body {
 
 .options {
     text-align: center;
- }
+}
+
+.options label {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #aa2828;
+    font-weight: bold;
+}
 
 .intro input {
     width: 90%;
