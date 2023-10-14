@@ -52,7 +52,11 @@ document.getElementById("ok").addEventListener('click', () => {
         outputLog.appendChild(outpuLogText);
         document.getElementById("outputLog").appendChild(outputLog);
     } else if (state.value == "hasKey") {
-        document.getElementById("output").innerText = tree.hasKey((document.getElementById("inputNumber").value))
+        if (tree.hasKey((document.getElementById("inputNumber").value))) {
+            document.getElementById("output").innerText = "The key " + document.getElementById("inputNumber").value + " is in the BST ";
+        } else {
+            document.getElementById("output").innerText = "The key " + document.getElementById("inputNumber").value + " is NOT in the BST ";
+        }
     } else if (state.value == "inOrder") {
         let order = tree.inOrder();
         document.getElementById("output").innerText = order;
@@ -75,7 +79,11 @@ document.getElementById("inputNumber").addEventListener("keyup", (event) => {
             outputLog.appendChild(outpuLogText);
             document.getElementById("outputLog").appendChild(outputLog);
         } else if (state.value == "hasKey") {
-            document.getElementById("output").innerText = tree.hasKey((document.getElementById("inputNumber").value))
+            if (tree.hasKey(document.getElementById("inputNumber").value)) {
+                document.getElementById("output").innerText = "The key " + document.getElementById("inputNumber").value + " is in the BST ";
+            } else {
+                document.getElementById("output").innerText = "The key " + document.getElementById("inputNumber").value + " is NOT in the BST ";
+            }
         } else if (state.value == "inOrder") {
             let order = tree.inOrder();
             document.getElementById("output").innerText = order;
