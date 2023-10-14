@@ -8,6 +8,7 @@ function redow () {
 
     document.getElementById("ok").style.marginTop = "0px"
     document.getElementById("ok").style.width = "6%"
+    document.getElementById("output").innerText = "";
 }
 
 document.getElementById('option').addEventListener('click', (e) => {
