@@ -59,7 +59,12 @@ document.getElementById("ok").addEventListener('click', () => {
         }
     } else if (state.value == "inOrder") {
         let order = tree.inOrder();
-        document.getElementById("output").innerText = order;
+        console.log(order.length)
+        if (order.length <= 0) {
+            document.getElementById("output").innerText = "BST is empty...";
+        } else {
+            document.getElementById("output").innerText = order;
+        }
     }
 });
 
@@ -86,7 +91,12 @@ document.getElementById("inputNumber").addEventListener("keyup", (event) => {
             }
         } else if (state.value == "inOrder") {
             let order = tree.inOrder();
-            document.getElementById("output").innerText = order;
+            console.log(order.length)
+            if (order.length <= 0) {
+                document.getElementById("output").innerText = "BST is empty...";
+            } else {
+                document.getElementById("output").innerText = order;
+            }
         }
     };
 })
