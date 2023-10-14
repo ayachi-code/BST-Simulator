@@ -7,6 +7,11 @@ body {
 }
 
 .intro h1 {
-    margin-left: 100px;
     color: #bc4c4c;
+    font-family: 'Courier New', Courier, monospace;
 }
+
+img {
+    /* transform: scale(1.3); */
+
+};
