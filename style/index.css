@@ -11,6 +11,10 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.options {
+    text-align: center;
+ }
+
 .intro input {
     width: 90%;
 }
