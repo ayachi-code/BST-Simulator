@@ -37,7 +37,12 @@ class BST {
             let newNode = new Node(value);
             this.root = newNode;
             return;
-        };
+        }
+
+        if (this.hasKey(value)) {
+            return;
+        }
+
         this.insertRecursive(this.root, value);
     };
 
@@ -47,11 +52,11 @@ class BST {
         }
 
         if (value < root.key && root.right != null) {
-            this.hasKeyRecursive(root.left, value);
+            return this.hasKeyRecursive(root.left, value);
         }
 
         if (value > root.key && root.right != null) {
-            this.hasKeyRecursive(root.right, value);
+            return this.hasKeyRecursive(root.right, value);
         }
 
         return false;
