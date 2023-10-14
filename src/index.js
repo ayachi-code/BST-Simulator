@@ -40,6 +40,11 @@ document.getElementById('option').addEventListener('click', (e) => {
 
 document.getElementById("ok").addEventListener('click', () => {
     if (state.value == "insert") {
+        if (isNaN(parseInt(document.getElementById("inputNumber").value, 10))) {
+            alert("Please enter a number...")
+            document.getElementById("inputNumber").value = "";
+            return;
+        }
         tree.Insert(document.getElementById("inputNumber").value);
         console.log("inserting " + document.getElementById("inputNumber").value );
         let outputLog = document.createElement("p");
@@ -58,6 +63,11 @@ document.getElementById("ok").addEventListener('click', () => {
 document.getElementById("inputNumber").addEventListener("keyup", (event) => {
     if (event.key == "Enter") {
         if (state.value == "insert") {
+            if (isNaN(parseInt(document.getElementById("inputNumber").value, 10))) {
+                alert("Please enter a number...")
+                document.getElementById("inputNumber").value = "";
+                return;
+            }
             tree.Insert(parseInt(document.getElementById("inputNumber").value));
             console.log("inserting " + document.getElementById("inputNumber").value );
             let outputLog = document.createElement("p");
