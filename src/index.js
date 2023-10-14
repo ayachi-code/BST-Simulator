@@ -23,6 +23,9 @@ document.getElementById('option').addEventListener('click', (e) => {
 
 document.getElementById("ok").addEventListener('click', () => {
     if (state.value == "insert") {
-        console.log("inaer");
+        tree.Insert(document.getElementById("inputNumber").value);
+        console.log("inserting " + document.getElementById("inputNumber").value );
+    } else if (state.value == "hasKey") {
+        console.log(tree.hasKey((document.getElementById("inputNumber").value)))
     }
 });
