@@ -33,4 +33,12 @@ body {
 
 .intro input {
     width: 90%;
+    border-style: solid;
+    border-color: #aa2828;
+    margin-top: 10px;
+}
+
+button {
+    border-style: solid;
+    border-color: #aa2828;
 }
