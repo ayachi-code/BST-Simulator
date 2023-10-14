@@ -1,7 +1,28 @@
+let tree = new BST();
 
 let state = document.getElementById("option");
 
+function redow () {
+    document.getElementById("inputNumber").style.display = "inline";
+    document.getElementById("inputNumber").style.width = "90%";
+
+    document.getElementById("ok").style.marginTop = "0px"
+    document.getElementById("ok").style.width = "6%"
+}
+
+document.getElementById('option').addEventListener('click', (e) => {
+    if (state.value == "inOrder") {
+        console.log("Setting inOrder");
+        document.getElementById("inputNumber").style.display = "none";
+        document.getElementById("ok").style.marginTop = "10px"
+        document.getElementById("ok").style.width = "100%"
+    } else {
+        redow();
+    }
+})
 
 document.getElementById("ok").addEventListener('click', () => {
-    console.log("clicked");
+    if (state.value == "insert") {
+        console.log("inaer");
+    }
 });
