@@ -86,11 +86,11 @@ class BST {
 };
 
 
-let x = new BST();
-x.Insert(33);
-x.Insert(12);
-x.Insert(34);
-x.Insert(4);
-let y = x.inOrder();
-console.log(y);
+// let x = new BST();
+// x.Insert(33);
+// x.Insert(12);
+// x.Insert(34);
+// x.Insert(4);
+// let y = x.inOrder();
+// console.log(y);
 
