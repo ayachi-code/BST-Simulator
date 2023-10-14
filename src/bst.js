@@ -3,22 +3,23 @@ class Node {
         this.key = key;
         this.left = null;
         this.right = null;
-        this.inOrderList = [];
     };
 }
 
 class BST {
     constructor() {
         this.root = null;
+        this.inOrderList = [];
     }
 
     insertRecursive(root, value) {
+        // debugger;
         if (value < root.key && root.left != null) {
-            this.insertRecursive(root.left, value);
+            return this.insertRecursive(root.left, value);
         }
 
         if (value > root.key && root.right != null) {
-            this.insertRecursive(root.right, value);
+            return this.insertRecursive(root.right, value);
         }
 
         if (value < root.key && root.left == null) {
@@ -51,7 +52,7 @@ class BST {
             return true;
         }
 
-        if (value < root.key && root.right != null) {
+        if (value < root.key && root.left != null) {
             return this.hasKeyRecursive(root.left, value);
         }
 
@@ -70,6 +71,7 @@ class BST {
     }
 
     inOrderRecursion(root) {
+        // debugger;
         if (root.left != null) {
             this.inOrderRecursion(root.left);
         }

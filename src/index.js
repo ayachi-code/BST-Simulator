@@ -30,9 +30,11 @@ document.getElementById('option').addEventListener('click', (e) => {
     } else if (state.value == "hasKey") {
         cleanLogs();
         redow();
+        document.getElementById("inputNumber").value = "";
     } else {
         redow();
         document.getElementById("output").innerText = "";
+        document.getElementById("inputNumber").value = "";
     }
 })
 
@@ -56,7 +58,7 @@ document.getElementById("ok").addEventListener('click', () => {
 document.getElementById("inputNumber").addEventListener("keyup", (event) => {
     if (event.key == "Enter") {
         if (state.value == "insert") {
-            tree.Insert(document.getElementById("inputNumber").value);
+            tree.Insert(parseInt(document.getElementById("inputNumber").value));
             console.log("inserting " + document.getElementById("inputNumber").value );
             let outputLog = document.createElement("p");
             let outpuLogText = document.createTextNode("Inserting: " +  document.getElementById("inputNumber").value + " to the BST" )
