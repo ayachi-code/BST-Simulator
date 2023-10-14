@@ -27,5 +27,8 @@ document.getElementById("ok").addEventListener('click', () => {
         console.log("inserting " + document.getElementById("inputNumber").value );
     } else if (state.value == "hasKey") {
         document.getElementById("output").innerText = tree.hasKey((document.getElementById("inputNumber").value))
+    } else if (state.value == "inOrder") {
+        let order = tree.inOrder();
+        document.getElementById("output").innerText = order;
     }
 });
