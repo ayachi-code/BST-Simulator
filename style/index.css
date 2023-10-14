@@ -66,3 +66,21 @@ button:active {
     background-color: #3a9a70;
     transform: translateY(4px);
   }
+
+
+.SO p {
+    color: #aa2828;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+  .SO {
+    position: absolute;
+    color: #aa2828;;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+}
