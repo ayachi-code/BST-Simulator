@@ -45,7 +45,7 @@ document.getElementById("ok").addEventListener('click', () => {
             document.getElementById("inputNumber").value = "";
             return;
         }
-        tree.Insert(document.getElementById("inputNumber").value);
+        tree.Insert(parseInt(document.getElementById("inputNumber").value));
         console.log("inserting " + document.getElementById("inputNumber").value );
         let outputLog = document.createElement("p");
         let outpuLogText = document.createTextNode("Inserting: " +  document.getElementById("inputNumber").value + " to the BST" )
